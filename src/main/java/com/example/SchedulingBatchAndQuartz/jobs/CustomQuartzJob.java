@@ -48,8 +48,9 @@ public class CustomQuartzJob extends QuartzJobBean {
             JobParameters params = new JobParametersBuilder()
                     .addString("JobID", String.valueOf(System.currentTimeMillis()))
                     .toJobParameters();
-
+            System.out.println(jobName+"basladi.");
             jobLauncher.run(job, params);
+            System.out.println(jobName+"bitti.");
         }
         catch (Exception e)
         {
